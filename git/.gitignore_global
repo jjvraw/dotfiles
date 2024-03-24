@@ -1,0 +1,12 @@
+# OS Specific files
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# LSP
+.project
+.settings
+.classpath
+
