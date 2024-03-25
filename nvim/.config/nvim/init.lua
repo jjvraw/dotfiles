@@ -13,3 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+
+-- For tmux auto window renaming
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  callback = function()
+    vim.cmd("silent !tmux rename-window " .. vim.fn.expand("%:t"))
+  end,
+})
