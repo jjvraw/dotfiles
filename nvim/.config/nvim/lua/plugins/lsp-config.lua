@@ -12,7 +12,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"jdtls",
-                    "pyright"
+                    "pyright",
+                    "clangd",
 				},
 			})
 		end,
@@ -32,6 +33,10 @@ return {
             })
             lspconfig.pyright.setup({
                 capabilities = capabilities
+            })
+            lspconfig.clangd.setup({
+                capabilities = capabilities,
+                
             })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
