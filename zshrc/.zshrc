@@ -18,13 +18,20 @@ alias vim=nvim
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 #export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 #export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-# Following this, add other PATH modifications
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/usr/local/opt/gcc/bin:$PATH"
 export GCC_PATH="/opt/homebrew/bin/"
+
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MODULAR_HOME="$HOME/.modular"
 export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
 eval "$(starship init zsh)"
