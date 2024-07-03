@@ -27,5 +27,7 @@ return {
                  enable = true
              },
         }
+
+        vim.treesitter.language.register('python', 'mojo')
 	end
 }

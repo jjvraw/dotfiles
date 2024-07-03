@@ -38,6 +38,18 @@ return {
                 capabilities = capabilities,
             })
 
+            lspconfig.mojo.setup({
+                capabilities = capabilities, -- Eh, for later.. assumabily
+            })
+
+            -- Ensure Mojo filetype detection (this might be redundant with Vim's runtime files)
+            vim.cmd([[
+                augroup MojoFiletype
+                    autocmd!
+                    autocmd BufRead,BufNewFile *.mojo,*.🔥 setfiletype mojo
+                augroup END
+            ]])
+
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
