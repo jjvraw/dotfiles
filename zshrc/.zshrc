@@ -16,8 +16,9 @@ unset __conda_setup
 alias vim=nvim
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-#export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-#export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export PATH="/opt/homebrew/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -33,5 +34,16 @@ export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+export MODULAR_HOME="/Users/joshuajamesventer/.modular"
+export PATH="/Users/joshuajamesventer/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+export MODULAR_HOME=/Users/joshuajamesventer/.modular
+export PATH="$HOME/.modular/pkg/packages.modular.com_nightly_mojo/bin:$PATH"
+export MODULAR_HOME=/Users/joshuajamesventer/.modular
+export PATH="$HOME/.modular/pkg/packages.modular.com_nightly_mojo/bin:$PATH"
+
+export GPG_TTY=$(tty)
 
 eval "$(starship init zsh)"
