@@ -40,3 +40,5 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 export GPG_TTY=$(tty)
 
 eval "$(starship init zsh)"
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
