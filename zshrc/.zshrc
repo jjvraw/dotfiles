@@ -42,3 +42,4 @@ export GPG_TTY=$(tty)
 eval "$(starship init zsh)"
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+export PATH="/opt/homebrew/opt/ghc@9.6/bin:$PATH"
