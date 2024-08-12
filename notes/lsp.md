@@ -1,9 +1,10 @@
 # LSP
 Notes for any past struggles.
-## Haskell LSP ((hls)[https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#hls])
+## Haskell LSP ([hls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#hls))
 ### Useful links
 - https://haskell-language-server.readthedocs.io/en/latest/configuration.html#neovim
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#hls
+
 Found better xp via `brew`:
 
 ```shell
