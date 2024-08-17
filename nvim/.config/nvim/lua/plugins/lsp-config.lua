@@ -62,6 +62,17 @@ return {
                 augroup END
             ]])
 
+			local function conditional_format()
+				if vim.bo.filetype == "mojo" then
+					vim.cmd("w")
+					vim.fn.system("mojo format " .. vim.fn.expand("%:p"))
+					vim.cmd("e")
+				else
+					vim.lsp.buf.format({ async = true })
+				end
+			end
+
+			vim.keymap.set("n", "<leader>gf", conditional_format, { noremap = true, silent = true })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
