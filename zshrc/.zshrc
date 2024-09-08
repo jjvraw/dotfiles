@@ -15,6 +15,8 @@ unset __conda_setup
 
 alias vim=nvim
 
+alias p-env="python3 -m venv ./venv && source venv/bin/activate"
+
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
@@ -31,6 +33,7 @@ export GCC_PATH="/opt/homebrew/bin/"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MODULAR_HOME="$HOME/.modular"
 export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+export PATH="$PATH:/Users/joshuajamesventer/.modular/bin"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
@@ -39,6 +42,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 
 export GPG_TTY=$(tty)
 
+export PATH="/opt/homebrew/opt/ghc@9.6/bin:$PATH"
+
 eval "$(starship init zsh)"
 
-export PATH="/opt/homebrew/opt/ghc@9.6/bin:$PATH"
