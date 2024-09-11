@@ -35,7 +35,6 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MODULAR_HOME="/Users/joshuajamesventer/.modular"
 export PATH="/Users/joshuajamesventer/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 
-eval "$(magic completion --shell zsh)"
 export PATH="$PATH:/Users/joshuajamesventer/.modular/bin"
 
 export PATH="/usr/local/bin:$PATH"
