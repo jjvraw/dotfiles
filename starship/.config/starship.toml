@@ -18,6 +18,7 @@ $php\
 $java\
 $kotlin\
 $haskell\
+${custom.mojo}\
 $python\
 [](fg:teal bg:blue)\
 $docker_context\
@@ -160,6 +161,15 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[custom.mojo]
+symbol = "🔥"
+command = "mojo --version | awk '{print $2}'"
+detect_files = ["magic.lock"]
+detect_folders = [".magic"]
+detect_extensions = ["🔥", "mojo"]
+format = '[[ $symbol ($output) ](fg:base bg:teal)]($style)'
+style = "bg:teal"
 
 [python]
 symbol = ""
