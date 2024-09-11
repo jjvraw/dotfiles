@@ -164,11 +164,17 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [custom.mojo]
 symbol = "🔥"
-command = "mojo --version | awk '{print $2}'"
 detect_files = ["magic.lock"]
+command = """
+if [[ -n $CONDA_PREFIX ]]; then
+  mojo --version | awk '{print "🪄 " $2}'
+else
+  mojo --version | awk '{print $2}'
+fi
+"""
 detect_folders = [".magic"]
 detect_extensions = ["🔥", "mojo"]
-format = '[[ $symbol ($output) ](fg:base bg:teal)]($style)'
+format = '[[$symbol ($output)](fg:base bg:teal)]($style)'
 style = "bg:teal"
 
 [python]
