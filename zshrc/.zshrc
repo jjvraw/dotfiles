@@ -31,8 +31,11 @@ export PATH="/usr/local/opt/gcc/bin:$PATH"
 export GCC_PATH="/opt/homebrew/bin/"
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MODULAR_HOME="$HOME/.modular"
-export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+
+export MODULAR_HOME="/Users/joshuajamesventer/.modular"
+export PATH="/Users/joshuajamesventer/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
+eval "$(magic completion --shell zsh)"
 export PATH="$PATH:/Users/joshuajamesventer/.modular/bin"
 
 export PATH="/usr/local/bin:$PATH"
@@ -45,4 +48,5 @@ export GPG_TTY=$(tty)
 export PATH="/opt/homebrew/opt/ghc@9.6/bin:$PATH"
 
 eval "$(starship init zsh)"
+
 
