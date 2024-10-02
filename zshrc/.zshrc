@@ -16,6 +16,7 @@ unset __conda_setup
 alias vim=nvim
 
 alias p-env="python3 -m venv ./venv && source venv/bin/activate"
+alias mumi="magic update && magic install"
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
@@ -31,9 +32,6 @@ export PATH="/usr/local/opt/gcc/bin:$PATH"
 export GCC_PATH="/opt/homebrew/bin/"
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
-export MODULAR_HOME="/Users/joshuajamesventer/.modular"
-export PATH="/Users/joshuajamesventer/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 
 export PATH="$PATH:/Users/joshuajamesventer/.modular/bin"
 
