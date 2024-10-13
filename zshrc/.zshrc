@@ -13,11 +13,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-alias vim=nvim
+alias cl=clear
 
-alias p-env="python3 -m venv ./venv && source venv/bin/activate"
+alias vim="nvim"
+
+alias py="python3"
+alias senv="source venv/bin/activate"
+alias nenv="python3 -m venv ./venv && source venv/bin/activate"
+
 alias mumi="magic update && magic install"
 alias ms="magic shell"
+alias minit="magic init --format mojoproject -c conda-forge -c https://conda.modular.com/max-nightly/"
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
