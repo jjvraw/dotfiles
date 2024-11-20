@@ -1,17 +1,9 @@
-import = [
-  # uncomment the flavour you want below:
-  # "~/.config/alacritty/catppuccin-latte.toml"
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
-
 # https://github.com/catppuccin/alacritty?tab=readme-ov-file#-faq == "My colours don't look the same as the previews. What do I do?"
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 21
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
@@ -25,4 +17,12 @@ style = "Bold"
 family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 
+[general]
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
 
