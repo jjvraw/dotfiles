@@ -13,6 +13,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+function mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+alias pcr="pre-commit run --all-files"
+
 alias cl=clear
 
 alias vim="nvim"
