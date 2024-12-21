@@ -117,6 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
+alias ms="magic shell"
 
 export PATH="$PATH:/home/jjvraw/.modular/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -127,3 +128,4 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
 
 eval "$(starship init bash)"
 
+export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
