@@ -21,7 +21,10 @@ alias pcr="pre-commit run --all-files"
 
 alias cl=clear
 
+alias ls='ls -Gh'
+alias la='ls -la'
 alias vim="nvim"
+export EDITOR='vim'
 
 alias py="python3"
 alias senv="source venv/bin/activate"
