@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 vim.g.background = "light"
 
+-- Requires xclip (Linux) or pbcopy/pbpaste (macOS) for system clipboard support
 vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
