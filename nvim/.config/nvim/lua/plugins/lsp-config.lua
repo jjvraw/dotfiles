@@ -54,14 +54,6 @@ return {
 				capabilities = capabilities, -- Eh, for later.. assumabily
 			})
 
-			-- Ensure Mojo filetype detection (this might be redundant with Vim's runtime files)
-			vim.cmd([[
-                augroup MojoFiletype
-                    autocmd!
-                    autocmd BufRead,BufNewFile *.mojo,*.🔥 setfiletype mojo
-                augroup END
-            ]])
-
 			local function conditional_format()
 				if vim.bo.filetype == "mojo" then
 					vim.cmd("w")

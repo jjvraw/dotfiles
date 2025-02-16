@@ -26,10 +26,3 @@ vim.keymap.set('v', 'd', '"_d')
 -- Maintain visual mode after indenting
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
-
--- Mojo
-vim.filetype.add({
-    extension = {
-        mojo = "mojo",
-    },
-})
