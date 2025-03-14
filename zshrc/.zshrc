@@ -60,6 +60,8 @@ export GPG_TTY=$(tty)
 
 export PATH="/opt/homebrew/opt/ghc@9.6/bin:$PATH"
 
+# Workaround for tmux's issues
+bindkey '^R' history-incremental-search-backward
+bindkey '^P' up-history
+
 eval "$(starship init zsh)"
-
-
