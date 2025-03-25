@@ -120,6 +120,8 @@ fi
 alias ms="magic shell"
 alias mumi="magic update && magic install"
 
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="$PATH:/home/jjvraw/.modular/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
