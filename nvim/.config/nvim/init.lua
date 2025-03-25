@@ -15,8 +15,26 @@ require("vim-options")
 require("lazy").setup("plugins")
 
 -- For tmux auto window renaming
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  callback = function()
-    vim.cmd("silent !tmux rename-window " .. vim.fn.expand("%:t"))
-  end,
-})
+if vim.env.TMUX then
+  vim.api.nvim_create_augroup("tmux", { clear = true })
+  vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost", "BufNewFile", "FocusGained"}, {
+    group = "tmux",
+    callback = function()
+      local filename = vim.fn.expand("%:t")
+      if filename == "" then
+        -- We're likely in a directory view (like netrw or oil.nvim)
+        local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+        vim.fn.system("tmux rename-window " .. dir_name)
+      else
+        vim.fn.system("tmux rename-window " .. filename)
+      end
+    end
+  })
+  vim.api.nvim_create_autocmd("VimLeave", {
+    group = "tmux",
+    callback = function()
+      local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+      vim.fn.system("tmux rename-window " .. dir_name)
+    end
+  })
+end
