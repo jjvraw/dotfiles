@@ -3,6 +3,7 @@
 	name = Joshua James Venter
 [core]
 	editor = nvim
+	excludesfile = ~/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

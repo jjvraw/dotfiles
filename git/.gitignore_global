@@ -13,4 +13,4 @@ compile_commands.json # clangd
 .cache/ # clangd
 
 # Virtual Envs
-venv
+**/venv/
