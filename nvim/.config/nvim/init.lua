@@ -24,9 +24,9 @@ if vim.env.TMUX then
       if filename == "" then
         -- We're likely in a directory view (like netrw or oil.nvim)
         local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-        vim.fn.system("tmux rename-window " .. dir_name)
+        vim.fn.system("tmux rename-window " .. vim.fn.shellescape(dir_name))
       else
-        vim.fn.system("tmux rename-window " .. filename)
+        vim.fn.system("tmux rename-window " .. vim.fn.shellescape(filename))
       end
     end
   })
@@ -34,7 +34,7 @@ if vim.env.TMUX then
     group = "tmux",
     callback = function()
       local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-      vim.fn.system("tmux rename-window " .. dir_name)
+      vim.fn.system("tmux rename-window " .. vim.fn.shellescape(dir_name))
     end
   })
 end
