@@ -1,6 +1,6 @@
 # Sound
 
-- AOP Equaliser: `xm5-clarity.json`
+- AOP Equaliser (via [easyeffects](https://github.com/wwmm/easyeffects)): `xm5-clarity`
 - PipeWire/WirePlumber configuration: `51-sony-xm5.lua`
     - Restart audio services after change: `systemctl --user restart pipewire pipewire-pulse wireplumber`
 
