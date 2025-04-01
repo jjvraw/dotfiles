@@ -5,14 +5,17 @@ vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 vim.g.background = "light"
 
+
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.opt.swapfile = false
+
 -- Requires xclip (Linux) or pbcopy/pbpaste (macOS) for system clipboard support
 vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.wo.number = true
-vim.wo.relativenumber = true
 
--- Navigate vim panes better
+-- Navigate vim panes
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
