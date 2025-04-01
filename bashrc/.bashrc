@@ -119,6 +119,9 @@ fi
 
 alias ms="magic shell"
 alias mumi="magic update && magic install"
+mr() {
+    magic run "$@"
+}
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
