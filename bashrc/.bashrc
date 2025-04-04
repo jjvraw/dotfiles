@@ -131,4 +131,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/usr/local/cuda-12.3/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
 
+export JAVA_HOME=/usr/lib/jvm/jdk-16.0.2+7
+export PATH=$JAVA_HOME/bin:$PATH
+
 eval "$(starship init bash)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

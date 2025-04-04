@@ -9,6 +9,7 @@
 .project
 .settings
 .classpath
+.clang-format
 compile_commands.json # clangd
 .cache/ # clangd
 
