@@ -119,6 +119,7 @@ fi
 
 alias ms="magic shell"
 alias mumi="magic update && magic install"
+alias mvim="magic run nvim"
 mr() {
     magic run "$@"
 }
