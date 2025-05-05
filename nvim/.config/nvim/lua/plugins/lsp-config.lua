@@ -15,6 +15,7 @@ return {
 					"pyright",
 					"clangd",
 					"hls",
+                    "tablegen"
 				},
 			})
 		end,
