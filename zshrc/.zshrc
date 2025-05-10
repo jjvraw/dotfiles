@@ -33,6 +33,10 @@ alias nenv="python3 -m venv ./venv && source venv/bin/activate"
 alias mumi="magic update && magic install"
 alias ms="magic shell"
 alias minit="magic init --format mojoproject -c conda-forge -c https://conda.modular.com/max-nightly/"
+alias mvim="magic run nvim"
+mr() {
+    magic run "$@"
+}
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
