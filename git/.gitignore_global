@@ -4,14 +4,16 @@
 # Vim
 *.swp
 *.swo
+Session.vim
 
 # LSP
 .project
 .settings
 .classpath
 .clang-format
-compile_commands.json # clangd
+compile_commands.json
 .cache/ # clangd
+tablegen_compile_commands.yml
 
 # Virtual Envs
 **/venv/
