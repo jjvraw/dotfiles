@@ -14,7 +14,6 @@ return {
                     "jdtls",
                     "pyright",
                     "clangd",
-                    "hls",
                 },
             })
         end,
@@ -40,7 +39,7 @@ return {
             })
             lspconfig.hls.setup({
                 capabilities = capabilities,
-                cmd = { "haskell-language-server-wrapper", "--lsp" },
+                cmd = { os.getenv("HOME") .. "/.ghcup/bin/haskell-language-server-wrapper", "--lsp" },
                 filetypes = { "haskell", "lhaskell" },
                 root_dir = lspconfig.util.root_pattern(
                     "*.cabal",
@@ -64,12 +63,14 @@ return {
                 end
             end
 
-            -- After building from source.
             local configs = require("lspconfig.configs")
             if not configs.tblgen_lsp_server then
                 configs.tblgen_lsp_server = {
                     default_config = {
-                        cmd = { '/home/jjvraw/Git/llvm-project/build/bin/tblgen-lsp-server' },
+                        cmd = {
+                            '/home/jjvraw/Git/llvm-project/build/bin/tblgen-lsp-server',
+                            '--tablegen-compilation-database=' .. vim.fn.getcwd() .. '/tablegen_compile_commands.yml'
+                        },
                         filetypes = { 'tablegen' },
                         root_dir = lspconfig.util.root_pattern('.git', 'tablegen_compile_commands.yml'),
                     },
