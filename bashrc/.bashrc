@@ -135,6 +135,9 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
 export JAVA_HOME=/usr/lib/jvm/jdk-16.0.2+7
 export PATH=$JAVA_HOME/bin:$PATH
 
+
+[ -f "/home/jjvraw/.ghcup/env" ] && . "/home/jjvraw/.ghcup/env" # ghcup-env
+
 eval "$(starship init bash)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
