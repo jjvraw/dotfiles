@@ -90,5 +90,13 @@ return {
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
             vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename)
         end,
+
+        vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            underline = true,
+            update_in_insert = false,
+            severity_sort = true,
+        })
     },
 }
