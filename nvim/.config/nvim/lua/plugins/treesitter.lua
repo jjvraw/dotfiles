@@ -26,6 +26,7 @@ return {
             },
             indent = {
                 enable = true,
+                disable = { "c", "cpp", "tablegen" },
             },
         })
     end,
