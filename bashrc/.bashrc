@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias python="python3"
 
 alias ms="magic shell"
 alias mumi="magic update && magic install"
