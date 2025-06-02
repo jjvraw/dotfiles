@@ -68,7 +68,7 @@ return {
                 configs.tblgen_lsp_server = {
                     default_config = {
                         cmd = {
-                            '/home/jjvraw/Git/llvm-project/build/bin/tblgen-lsp-server',
+                            '~/Git/llvm-project/build/bin/tblgen-lsp-server',
                             '--tablegen-compilation-database=' .. vim.fn.getcwd() .. '/tablegen_compile_commands.yml'
                         },
                         filetypes = { 'tablegen' },
