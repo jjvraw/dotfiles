@@ -11,9 +11,6 @@ return {
             vim.keymap.set('n', '<leader>fh', builtin.oldfiles, { desc = 'Recently opened files' })
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Find word (grep)' })
             vim.keymap.set('n', '<leader>fm', builtin.marks, { desc = 'Jump to bookmarks' })
-
-            -- New file command (creates a new buffer)
-            vim.keymap.set('n', 'e', '<cmd>enew<cr>', { desc = 'New file' })
         end
     },
     {
