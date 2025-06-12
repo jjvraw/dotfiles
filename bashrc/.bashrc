@@ -118,12 +118,14 @@ fi
 
 alias python="python3"
 
-alias ms="magic shell"
-alias mumi="magic update && magic install"
-alias mvim="magic run nvim"
-mr() {
-    magic run "$@"
+export PATH="/home/jjvraw/.pixi/bin:$PATH"
+pr() {
+    pixi run "$@"
 }
+
+alias pshell="pixi shell"
+alias pupi="pixi update && pixi install"
+alias pvim="pixi run nvim"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -144,3 +146,4 @@ eval "$(starship init bash)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
