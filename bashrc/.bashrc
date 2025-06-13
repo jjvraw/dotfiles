@@ -139,7 +139,9 @@ export JAVA_HOME=/usr/lib/jvm/jdk-16.0.2+7
 export PATH=$JAVA_HOME/bin:$PATH
 
 alias hub-start="sudo systemctl start OpenLinkHub.service"
+alias hub-gui="firefox http://localhost:27003"
 alias hub-stop="sudo systemctl stop OpenLinkHub.service"
+alias hub-status="sudo systemctl status OpenLinkHub.service"
 
 [ -f "/home/jjvraw/.ghcup/env" ] && . "/home/jjvraw/.ghcup/env" # ghcup-env
 
