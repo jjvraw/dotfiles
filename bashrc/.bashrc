@@ -138,6 +138,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
 export JAVA_HOME=/usr/lib/jvm/jdk-16.0.2+7
 export PATH=$JAVA_HOME/bin:$PATH
 
+alias hub-start="sudo systemctl start OpenLinkHub.service"
+alias hub-stop="sudo systemctl stop OpenLinkHub.service"
 
 [ -f "/home/jjvraw/.ghcup/env" ] && . "/home/jjvraw/.ghcup/env" # ghcup-env
 
@@ -146,4 +148,3 @@ eval "$(starship init bash)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
