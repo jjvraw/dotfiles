@@ -17,3 +17,4 @@ tablegen_compile_commands.yml
 
 # Virtual Envs
 **/venv/
+.env
