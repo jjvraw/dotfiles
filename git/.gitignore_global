@@ -17,4 +17,14 @@ tablegen_compile_commands.yml
 
 # Virtual Envs
 **/venv/
+<<<<<<< Updated upstream
 .env
+=======
+
+# Latex
+aux/
+out/
+*.log
+*.aux
+*.synctex.gz
+>>>>>>> Stashed changes
