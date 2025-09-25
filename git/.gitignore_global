@@ -17,9 +17,8 @@ tablegen_compile_commands.yml
 
 # Virtual Envs
 **/venv/
-<<<<<<< Updated upstream
-.env
-=======
+**/.env
+**/.envrc
 
 # Latex
 aux/

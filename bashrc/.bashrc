@@ -150,13 +150,10 @@ alias hub-status="sudo systemctl status OpenLinkHub.service"
 #     valgrind nvidia-smi "$@" 2> /dev/null
 # }
 # alias nvidia-smi="run-nvidia-smi"
+export PATH=$PATH:/usr/local/go/bin
 
 eval "$(starship init bash)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH=$PATH:/usr/local/go/bin
+eval "$(direnv hook bash)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -173,3 +170,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
