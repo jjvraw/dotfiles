@@ -47,6 +47,9 @@ return {
             lspconfig.clangd.setup({
                 capabilities = capabilities,
             })
+            lspconfig.arduino_language_server.setup({
+                capabilities = capabilities,
+            })
             lspconfig.ltex.setup({
                 capabilities = capabilities,
                 filetypes = { "latex", "tex", "bib" },
