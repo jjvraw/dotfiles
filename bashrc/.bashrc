@@ -132,8 +132,12 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="$PATH:/home/jjvraw/.modular/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export PATH=/usr/local/cuda-12.3/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/local/cuda-12.8
+export PATH=/usr/local/cuda-12.8/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH
+export CC=gcc-13
+export CXX=g++-13
+export CUDAHOSTCXX=g++-13
 
 export JAVA_HOME=/usr/lib/jvm/jdk-16.0.2+7
 export PATH=$JAVA_HOME/bin:$PATH
@@ -155,6 +159,8 @@ export PATH=$PATH:/usr/local/go/bin
 eval "$(starship init bash)"
 eval "$(direnv hook bash)"
 
+export PATH=$PATH:$HOME/bin
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/jjvraw/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -173,3 +179,5 @@ unset __conda_setup
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH=$PATH:/home/jjvraw/Git/home-systems/flat-gardening/bin
+export PATH="/usr/lib/ccache:$PATH"
