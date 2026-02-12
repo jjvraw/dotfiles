@@ -30,3 +30,9 @@ vim.keymap.set('v', 'd', '"_d')
 -- Maintain visual mode after indenting
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+
+-- Lua Thangs
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
+
