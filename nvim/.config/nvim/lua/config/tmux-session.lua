@@ -16,7 +16,10 @@ if vim.env.TMUX then
 		callback = function()
 			if vim.env.TMUX_PANE then
 				local session_file = get_session_filename()
-				vim.cmd("mksession! " .. session_file)
+				-- Only save if  valid tmux identifiers
+				if not session_file:match("---") then
+					vim.cmd("mksession! " .. session_file)
+				end
 			end
 		end,
 	})
