@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-
 ORIGINAL_COMMAND="$1"
 DIRECTORY="$2"
+SESSION_DIR="$HOME/.local/share/nvim/tmux-sessions"
 
 get_tmux_identifiers() {
     local session_id_raw=$(tmux display-message -p "#{session_id}")
@@ -11,9 +11,15 @@ get_tmux_identifiers() {
     echo "${session_id}-${window_index}-${pane_index}"
 }
 
-nvim_session_file_exists_for_identifiers() {
+get_session_file() {
     local identifiers=$(get_tmux_identifiers)
-    [ -e "${DIRECTORY}/.TmuxNvimSession-${identifiers}.vim" ]
+    local cwd_hash=$(echo "$DIRECTORY" | sed 's|/|_|g')
+    echo "${SESSION_DIR}/${cwd_hash}-${identifiers}.vim"
+}
+
+nvim_session_file_exists_for_identifiers() {
+    local session_file=$(get_session_file)
+    [ -e "$session_file" ]
 }
 
 nvim_session_file_exists() {
@@ -26,10 +32,8 @@ original_command_contains_session_flag() {
 
 main() {
     if nvim_session_file_exists_for_identifiers; then
-        local identifiers=$(get_tmux_identifiers)
-        echo "nvim -S ${DIRECTORY}/.TmuxNvimSession-${identifiers}.vim"
-    elif nvim_session_file_exists; then
-        echo "nvim -S"
+        local session_file=$(get_session_file)
+        echo "nvim -S ${session_file}"
     elif original_command_contains_session_flag; then
         echo "nvim"
     else
